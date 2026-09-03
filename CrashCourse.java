@@ -51,7 +51,47 @@ public static void main(String[] args) {
     System.out.println(e || f && !e); //richtig
 
     System.out.println(e && f);
-}
 
+
+    //  CASTING - a fancy word for converting
+
+    int g = (int)5.5;
+    System.out.println(g);
+    double h = (double)5/6;
+    System.out.println(h);
+
+    // STRINGS
+    String s1 = "Goodnight";
+    String s2 = " and ";
+    String s3 = "Goodbye";
+    String result = s1 + s2 + s3;
+    result += ", Cowboy.";
+System.out.println(result + "\n");
+
+    // ARRAYS
+    int[] arry1 = new int[10];
+    System.out.println(arry1);
+    System.out.println("length: " + arry1.length);
+
+    arry1[0] = 11;
+    arry1[1] = 2;
+    System.out.println("remainder: " + arry1[0] % arry1[1]);
+
+    int[] arry2 = {34, 52, 3, 64, 32};
+    System.out.println("arry2: " + arry2);
+
+    // 2D arrays - a grid or table
+
+    int[][] arryGrid1 = new int[4][3] // first num is rows, second is collumns [r][c]
+    // 0 0 0
+    // 0 0 0
+    // 0 0 0
+    // 0 0 0
+
+    System.out.println("rows: " + arryGrid1.length); // prints rows
+    System.out.println("collumns: " + arryGrid1[0].length); // prints length of row, and therefore the number of collumns
+
+
+}
 
 }
