@@ -19,6 +19,12 @@ public class Dog {
         this.dogName = dogName;
         this.ownerName = ownerName;
         this.breed = breed;
+
+        energyLevel = 100;
+        isHome = true;
+        weight = 10.0;
+        isHungry = false;
+        age = 0;
     }
 
     public void bark() {
@@ -27,4 +33,28 @@ public class Dog {
 
     public void scratch() {
     }
+
+    public void bite() {
+    }
+
+    public void eat() {
+        isHungry = false;
+    }
+
+    public void run_away() {
+        isHome = false;
+    }
+
+    public void come_home() {
+        isHome = true;
+    }
+
+    public void sleep() {
+        energyLevel += 75;
+    }
+
+    public void birthday() {
+        age += 1;
+    }
+
 }
