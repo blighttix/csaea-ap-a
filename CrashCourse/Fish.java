@@ -32,6 +32,7 @@ public class Fish {
 
     public void eat() {
         fishWeight += 0.1;
+        System.out.println("nom nom");
     }
 
     public void grow() {
