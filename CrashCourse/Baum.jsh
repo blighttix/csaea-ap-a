@@ -1,5 +1,4 @@
-// package CrashCourse;
-
+import module java.base;
 public class Fish {
     String characterName;
     int characterHealth;
@@ -40,3 +39,20 @@ public class Fish {
     }
 
 }
+Fish blub = new Fish("blub", "goldfish", "orange");
+Fish bloob = new Fish("bloob", "beta", "blue");
+Fish bitey = new Fish("bitey", "piranha", "tan");
+Fish yum = new Fish("yum", "salmon", "silver");
+Fish yummers = new Fish("yummers", "tuna", "silver");
+yum.attack()
+yum.lay_eggs()
+yum.swim()
+yum.eat()
+yum.grow()
+yum.characterName
+yum.characterHealth
+yum.fishType
+yum.underWater
+yum.fishWeight
+yum.fishColor
+yum.inOpen
