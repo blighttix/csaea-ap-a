@@ -23,7 +23,7 @@ public class Book {
         if (inCirculation = true) {
             System.out.println(bookTitle + " is already taken out!");
         } else {
-            System.out.println(bookTitle + " has been checked out.");
+            System.out.println(bookTitle + " has been checked out; you have 30 days to return it.");
         } }
 
     public void passDay() {
