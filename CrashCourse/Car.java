@@ -16,7 +16,7 @@ public class Car {
         speed = 0;
         beingDriven = false;
         needsRepair = false;
-        tankPercent = 1.0;
+        tankPercent = 100.0;
     }
 
     public void honkHorn() {
@@ -26,9 +26,30 @@ public class Car {
     public void crash() {
         if (beingDriven = false)
         {System.out.println("crashing is impossible right now!");}
-    } else {
+        else {
         needsRepair = true;
+        System.out.println("you must repair your car now.");}
     }
 
+    public void driveCar(int speedInput) {
+    if (needsRepair || (tankPercent<=5)) {
+        System.out.println("you can't drive this car right now.");
+    } else {
+        speed = speedInput;
+        System.out.println("you are now driving at " + speed + "MpH.");}
 
+    }
+
+    public void repairCar() {
+        if (needsRepair) {
+            needsRepair = false;
+            System.out.println("your car cas been repaired.");
+        }
+        else { System.out.println("your car doesn't need repair.");}
+    }
+
+    public void fillTank(double percent) {
+        tankPercent += percent;
+        System.out.println("your tank is now "+ tankPercent +"% full");
+    }
 }
