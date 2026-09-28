@@ -41,12 +41,13 @@ public class Book {
     public void returnBook() {
         System.out.println("you have returned " + bookTitle);
         isOverdue = false;
+        inCirculation = false;
         if (feeValue > 0) {
             System.out.println("you owe $" + feeValue + " to the library.");
         } }
 
     public void payFee(double payment) {
-        if ((inCirculation = false) && (feeValue > 0)) {
+        if ((inCirculation = false) && (feeValue > 0.0)) {
             feeValue -= payment;
             System.out.println("you now owe $" + feeValue);
         }
