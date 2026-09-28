@@ -1,4 +1,3 @@
-package CrashCourse;
 import java.util.ArrayList;
 
 public class CrashCourse {
@@ -12,9 +11,9 @@ public static void main(String[] args) {
 
     // variable declarations:
     //PRIMATIVE VARIABLES
-    int a = 5; //integer
-    double b = 5.5; //decimal / float
-    boolean c = true; //true or false
+    int a; //integer
+    double b; //decimal / float
+    boolean c; //true or false
 
     a = 4;
     b = 5.5;
