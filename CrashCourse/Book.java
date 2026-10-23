@@ -20,7 +20,7 @@ public class Book {
     feeValue = 0.0; }
 
     public void checkOut() {
-        if (inCirculation = true) {
+        if (inCirculation = false) {
             System.out.println(bookTitle + " is already taken out!");
         } else {
             System.out.println(bookTitle + " has been checked out; you have 30 days to return it.");
@@ -47,7 +47,7 @@ public class Book {
         } }
 
     public void payFee(double payment) {
-        if ((inCirculation = false) && (feeValue > 0.0)) {
+        if ((inCirculation = true) && (feeValue > 0.0)) {
             feeValue -= payment;
             System.out.println("you now owe $" + feeValue);
         }
