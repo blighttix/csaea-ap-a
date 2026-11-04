@@ -1,6 +1,3 @@
-package project;
-
-
 public class Deoderant {
    private String scent;
    private String brand;
@@ -23,23 +20,26 @@ public class Deoderant {
 
 
    public String toString() {
-       return "smells like " + scent + ", costs $" + price + ", contains " + remainingGrams + "g of product"
+       return "brand: " + brand + "; smells like " + scent + ", costs $" + price + "; can this be used? " + isUsable;
    }
   
-   public useDeoderant() {
+   public void useDeoderant() {
        if (usedTimes >= sizeGrams) {
            isUsable = false;
        }
        if (isUsable = true) {
-           sizeGrams -= 1;
+           usedTimes += 1;
        }
-       else {System.out.println("You can no longer use this deoderant; get a new one!")}
+       else {System.out.println("You can no longer use this deoderant; get a new one!");}
    }
 
 
-   public boolean isType(String type) {
-       return (scent.indexOf(type) != -1)
+   public boolean isBrand(String type) {
+       return (brand.indexOf(type) != -1);
    }
 
+    public String scentAdjective() {
+        return scent.substring(0,scent.indexOf(" "));
+    }
 
 }
