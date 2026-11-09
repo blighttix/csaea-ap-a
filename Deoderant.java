@@ -39,7 +39,7 @@ public class Deoderant {
    }
 
     public String scentAdjective() {
-        return scent.substring(0,scent.indexOf(" "));
+        return scent.substring(0,scent.indexOf(" ")-1);
     }
 
 }
