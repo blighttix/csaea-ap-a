@@ -66,13 +66,13 @@ public class ArrayLists {
 //      * Example: ["cat", "dog", "cat"], replace "cat" with "fox"  ->  [fox, dog, fox]
 //      * Tools:   for loop with index i, size(), get(i), set(i, obj), .equals()
 
-    public static void replaceAll(ArrayList<String> list, String oldVal, String newVal) {
-        for (int i = 0; i < list.size(); i++) {
-            if (animals.get(i) = oldVal) {
-                animals.get(i) = newVal;
-            }
-        }
-    }
+  //  public static void replaceAll(ArrayList<String> list, String oldVal, String newVal) {
+      //  for (int i = 0; i < list.size(); i++) {
+       //     if (animals.get(i) = oldVal) {
+       //         animals.get(i) = newVal;
+       //     }
+       // }
+   // }
     public static void numberUtilities() {
 
         //native array list
@@ -201,5 +201,38 @@ public class ArrayLists {
      * Hint:    you need TWO loops -- you can't compare to the average until you've seen every name
      *
 */
+
+    public static ArrayList<String> longNames(ArrayList<String> animals) {
+        int total = 0;
+        String longest = animals.get(0);
+        boolean hasFrog = false;
+        for (String name : animals) {
+            total += name.length();
+
+            if (name.length() > longest.length()) {
+                longest = name;
+            }
+
+            if (name.equals("glass frog")) {
+                hasFrog = true;
+            }
+        }
+        double avg = (double) total / animals.size();
+
+        ArrayList<String> result = new ArrayList<>();
+
+        for (String name : animals) {
+            if (name.length() > avg) {
+                result.add(name);
+            }
+        }
+
+        System.out.println("longest:" + longest);
+        System.out.println("Has glass frog?" + hasFrog);
+
+        return result;
+    }
+
+    
 
 }
